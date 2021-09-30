@@ -1,0 +1,18 @@
+1、需求:在桌面透明度大概30%，加灰度处理一下
+
+electron:
+Electron 继承了来自 Chromium 的多进程架构，这使得此框架在架构上非常相似于一个现代的网页浏览器
+
+主进程运行着Node.js
+就是把一个html 插到一个应用中：
+每个 Electron 应用都有一个单一的主进程：
+main：
+  app模块：控制该应用 生命周期
+  BrowserWindow模块： 这名字就很清楚，控制该界面窗口 渲染器进程
+  原生API
+
+  预加载脚本：与渲染器共享同一个全局 Window 接口   作用不详
+
+构建BrowserWindow 实例就可以控制窗口
+
+垃圾Electron，在ts使用挺多因为 冲突的bug

@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// 以下三行是中文化的关键代码
+import { ConfigProvider } from 'antd';
+import zhCN from 'antd/lib/locale/zh_CN';
+import 'moment/locale/zh-cn';
+// 下面一行应用antd格式
+import 'antd/dist/antd.css';
 
 ReactDOM.render(
-  <React.StrictMode>
+    <ConfigProvider locale={zhCN}>
     <App />
-  </React.StrictMode>,
+   </ConfigProvider>,
   document.getElementById('root')
 );
 
